@@ -4,9 +4,6 @@ public class Fraction {
     private int znam;
     //свойства
     int setChisl(int chisl) {
-        if (chisl==0) {
-            throw new IllegalArgumentException("Числитель не может быть равен нулю");
-        }
         this.chisl=chisl;
         return this.chisl;
     }
@@ -24,12 +21,8 @@ public class Fraction {
         return this.znam;
     }
     //конструктор
-//    Fraction(){
-//    }
     Fraction(int chisl, int znam) {
-        if (chisl==0) {
-            throw new IllegalArgumentException("Числитель не может быть равен нулю");
-        }if (znam==0) {
+        if (znam==0) {
             throw new IllegalArgumentException("Знаменатель не может быть равен нулю");
         }
         this.chisl=chisl;
@@ -79,6 +72,9 @@ public class Fraction {
     }
 
     public Fraction div(Fraction other) {
+        if (other.chisl==0){
+            throw new ArithmeticException();
+        }
         int newchisl=this.chisl*other.znam;
         int newznam=this.znam*other.chisl;
         return new Fraction(newchisl, newznam);
@@ -97,6 +93,9 @@ public class Fraction {
     }
 
     public Fraction divnum(int num) {
+        if (num==0){
+            throw new ArithmeticException();
+        }
         return new Fraction(this.chisl, this.znam*num);
     }
 }

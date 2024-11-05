@@ -175,38 +175,91 @@ public class Main {
         List<Integer> costs5 = new ArrayList<>();
         costs5.add(2);
         costs5.add(1);
-        City2 foneone = new City2("F", destinations5, costs5);
+        City2 F11 = new City2("F", destinations5, costs5);
         System.out.println(a11);
         System.out.println(b11);
         System.out.println(c11);
         System.out.println(d11);
         System.out.println(e11);
-        System.out.println(foneone);
+        System.out.println(F11);
 
         System.out.println("Задание 5.5");
         System.out.println("Введите 1-ую дробь");
         System.out.println("числитель:");
-        int ch1=in.nextInt();
+        int ch1;
+        while (true) {
+            if (in.hasNextInt()) {
+                ch1=in.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: введите целое число!");
+                in.next();
+            }
+        }
         System.out.println("знаменатель:");
-        int zn1=in.nextInt();
+        int zn1;
+        while (true) {
+            if (in.hasNextInt()) {
+                zn1=in.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: введите целое число!");
+                in.next();
+            }
+        }
         System.out.println("Введенная дробь:");
         Fraction f1 = new Fraction(ch1, zn1);
         System.out.println(f1);
 
         System.out.println("Введите 2-ую дробь");
         System.out.println("числитель:");
-        int ch2=in.nextInt();
+        int ch2;
+        while (true) {
+            if (in.hasNextInt()) {
+                ch2=in.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: введите целое число!");
+                in.next();
+            }
+        }
         System.out.println("знаменатель:");
-        int zn2=in.nextInt();
+        int zn2;
+        while (true) {
+            if (in.hasNextInt()) {
+                zn2=in.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: введите целое число!");
+                in.next();
+            }
+        }
         System.out.println("Введенная дробь:");
         Fraction f2 = new Fraction(ch2, zn2);
         System.out.println(f2);
 
         System.out.println("Введите 3-ую дробь");
-        System.out.println("числитель:");
-        int ch3=in.nextInt();
+        int ch3;
+        while (true) {
+            if (in.hasNextInt()) {
+                ch3=in.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: введите целое число!");
+                in.next();
+            }
+        }
         System.out.println("знаменатель:");
-        int zn3=in.nextInt();
+        int zn3;
+        while (true) {
+            if (in.hasNextInt()) {
+                zn3=in.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: введите целое число!");
+                in.next();
+            }
+        }
         System.out.println("Введенная дробь:");
         Fraction f3 = new Fraction(ch3, zn3);
         System.out.println(f3);
