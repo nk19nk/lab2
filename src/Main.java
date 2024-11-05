@@ -274,17 +274,27 @@ public class Main {
         System.out.println(f1 + " / " + f2 + " = " + f1.div(f2));
 
         System.out.println("Введите целое число:");
-        int num=in.nextInt();
+        int num;
+        while (true) {
+            if (in.hasNextInt()) {
+                num=in.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка: введите целое число!");
+                in.next();
+            }
+        }
+        Fraction numf=new Fraction(num, 1);
         System.out.println("Сложение дроби и числа:");
-        System.out.println(f1 + " + " + num + " = " + f1.sumnum(num));
+        System.out.println(f1 + " + " + num + " = " + f1.sum(numf));
         System.out.println("Вычитание дроби и числа:");
-        System.out.println(f2 + " - " + num + " = " + f1.minusnum(num));
+        System.out.println(f2 + " - " + num + " = " + f1.minus(numf));
         System.out.println("Умножение дроби и числа:");
-        System.out.println(f3 + " * " + num + " = " + f1.multiplynum(num));
+        System.out.println(f3 + " * " + num + " = " + f1.multiply(numf));
         System.out.println("Деление дроби и числа:");
-        System.out.println(f1 + " / " + num + " = " + f1.divnum(num));
+        System.out.println(f1 + " / " + num + " = " + f1.div(numf));
 
-        System.out.println("Результат f1.sum(f2).div(f3).minus(5) = " + f1.sum(f2).div(f3).minusnum(5));
+        System.out.println("Результат f1.sum(f2).div(f3).minus(5) = " + f1.sum(f2).div(f3).minus(5));
         in.close();
     }
 }

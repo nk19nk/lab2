@@ -79,23 +79,4 @@ public class Fraction {
         int newznam=this.znam*other.chisl;
         return new Fraction(newchisl, newznam);
     }
-
-    public Fraction sumnum(int num) {
-        return this.sum(new Fraction(num, 1));
-    }
-
-    public Fraction minusnum(int num) {
-        return this.minus(new Fraction(num, 1));
-    }
-
-    public Fraction multiplynum(int num) {
-        return new Fraction(this.chisl*num, this.znam);
-    }
-
-    public Fraction divnum(int num) {
-        if (num==0){
-            throw new ArithmeticException();
-        }
-        return new Fraction(this.chisl, this.znam*num);
-    }
 }
