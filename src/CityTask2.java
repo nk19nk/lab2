@@ -6,8 +6,28 @@ public class City2{
     private List<City2> destinations;
     private List<Integer> costs;
 
+    String setName(){
+        this.name=name;
+        return this.name;
+    }
     String getName() {
         return this.name;
+    }
+
+    List<City2> setDestinations(){
+        this.destinations=destinations;
+        return this.destinations;
+    }
+    List<City2> getDestinations(){
+        return this.destinations;
+    }
+
+    List<Integer> setCosts(){
+        this.costs=costs;
+        return this.costs;
+    }
+    List<Integer> getCosts(){
+        return this.costs;
     }
 
     City2(String name) {

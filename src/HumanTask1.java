@@ -1,4 +1,4 @@
-public class Human {
+public class HumanTask1 {
     //поля
     private String name;
     private int height;
@@ -18,7 +18,7 @@ public class Human {
         return this.height;
     }
     //конструктор
-    Human(String name, int height) {
+    HumanTask1(String name, int height) {
         this.name = name;
         this.height = height;
     }

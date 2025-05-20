@@ -1,6 +1,4 @@
-import javax.lang.model.element.Name;
-
-public class Human2 {
+public class HumanTask2 {
     //поля
     private Names name;
     private int height;
@@ -20,7 +18,7 @@ public class Human2 {
         return this.height;
     }
     //конструктор
-    Human2(Names name, int height) {
+    HumanTask2(Names name, int height) {
         this.name = name;
         this.height = height;
     }
