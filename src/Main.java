@@ -21,19 +21,21 @@ public class Main {
                 break;
             }
         }
-        Human x=new Human(nam,h);
+        HumanTask1 x=new HumanTask1(nam,h);
         System.out.println(x);
         System.out.println("Люди из задания:");
-        Human x1=new Human("Клеопатра", 152);
+        HumanTask1 x1=new HumanTask1("Клеопатра", 152);
         System.out.println(x1);
-        Human x2=new Human("Пушкин", 167);
+        HumanTask1 x2=new HumanTask1("Пушкин", 167);
         System.out.println(x2);
-        Human x3=new Human("Владимир", 189);
+        HumanTask1 x3=new HumanTask1("Владимир", 189);
         System.out.println(x3);
         in.nextLine();
 
         System.out.println("Задание 1.3");
-        String surname, name, patronymic;
+        String surname;
+        String name;
+        String patronymic;
         while (true) {
             System.out.println("Введите фамилию:");
             surname = in.nextLine().trim();
@@ -58,7 +60,9 @@ public class Main {
         System.out.println(y3);
 
         System.out.println("Задание 2.2");
-        String surname2, name2, patronymic2;
+        String surname2;
+        String name2;
+        String patronymic2;
         while (true) {
             System.out.println("Введите фамилию:");
             surname2 = in.nextLine().trim();
@@ -83,27 +87,27 @@ public class Main {
                 break;
             }
         }
-        Human2 n=new Human2(z, h2);
+        HumanTask2 n=new HumanTask2(z, h2);
         System.out.println(n);
         System.out.println("Люди из задания:");
         Names z1 = new Names( "Клеопатра");
-        Human2 n1=new Human2(z1,152);
+        HumanTask2 n1=new HumanTask2(z1,152);
         System.out.println(n1);
         Names z2 = new Names("Пушкин", "Александр", "Сергеевич");
-        Human2 n2=new Human2(z2,167);
+        HumanTask2 n2=new HumanTask2(z2,167);
         System.out.println(n2);
         Names z3 = new Names("Маяковский", "Владимир");
-        Human2 n3=new Human2(z3,189);
+        HumanTask2 n3=new HumanTask2(z3,189);
         System.out.println(n3);
 
         System.out.println("Задание 3.3");
         System.out.println("Схема, представленная в задании:");
-        City a = new City("A");
-        City b = new City("B");
-        City c = new City("C");
-        City d = new City("D");
-        City e = new City("E");
-        City f = new City("F");
+        CityTask1 a = new CityTask1("A");
+        CityTask1 b = new CityTask1("B");
+        CityTask1 c = new CityTask1("C");
+        CityTask1 d = new CityTask1("D");
+        CityTask1 e = new CityTask1("E");
+        CityTask1 f = new CityTask1("F");
         a.addRoute(b, 5);
         a.addRoute(f, 1);
         a.addRoute(d, 6);
@@ -126,13 +130,13 @@ public class Main {
 
         System.out.println("Задание 4.8");
         System.out.println("Схема, представленная в задании:");
-        City2 a1 = new City2("A");
-        City2 b1 = new City2("B");
-        City2 c1 = new City2("C");
-        City2 d1 = new City2("D");
-        City2 e1 = new City2("E");
-        City2 F1 = new City2("F");
-        List<City2> destinations = new ArrayList<>();
+        CityTask2 a1 = new CityTask2("A");
+        CityTask2 b1 = new CityTask2("B");
+        CityTask2 c1 = new CityTask2("C");
+        CityTask2 d1 = new CityTask2("D");
+        CityTask2 e1 = new CityTask2("E");
+        CityTask2 F1 = new CityTask2("F");
+        List<CityTask2> destinations = new ArrayList<>();
         destinations.add(b1);
         destinations.add(d1);
         destinations.add(F1);
@@ -140,22 +144,22 @@ public class Main {
         costs.add(5);
         costs.add(1);
         costs.add(6);
-        City2 a11 = new City2("A", destinations, costs);
-        List<City2> destinations1 = new ArrayList<>();
+        CityTask2 a11 = new CityTask2("A", destinations, costs);
+        List<CityTask2> destinations1 = new ArrayList<>();
         destinations1.add(a1);
         destinations1.add(c1);
         List<Integer> costs1 = new ArrayList<>();
         costs1.add(5);
         costs1.add(3);
-        City2 b11 = new City2("B", destinations1, costs1);
-        List<City2> destinations2 = new ArrayList<>();
+        CityTask2 b11 = new CityTask2("B", destinations1, costs1);
+        List<CityTask2> destinations2 = new ArrayList<>();
         destinations2.add(b1);
         destinations2.add(d1);
         List<Integer> costs2 = new ArrayList<>();
         costs2.add(3);
         costs2.add(4);
-        City2 c11 = new City2("C", destinations2, costs2);
-        List<City2> destinations3 = new ArrayList<>();
+        CityTask2 c11 = new CityTask2("C", destinations2, costs2);
+        List<CityTask2> destinations3 = new ArrayList<>();
         destinations3.add(a1);
         destinations3.add(c1);
         destinations3.add(e1);
@@ -163,19 +167,19 @@ public class Main {
         costs3.add(6);
         costs3.add(4);
         costs3.add(2);
-        City2 d11 = new City2("D", destinations3, costs3);
-        List<City2> destinations4 = new ArrayList<>();
+        CityTask2 d11 = new CityTask2("D", destinations3, costs3);
+        List<CityTask2> destinations4 = new ArrayList<>();
         destinations4.add(F1);
         List<Integer> costs4 = new ArrayList<>();
         costs4.add(2);
-        City2 e11 = new City2("E", destinations4, costs4);
-        List<City2> destinations5 = new ArrayList<>();
+        CityTask2 e11 = new CityTask2("E", destinations4, costs4);
+        List<CityTask2> destinations5 = new ArrayList<>();
         destinations5.add(e1);
         destinations5.add(b1);
         List<Integer> costs5 = new ArrayList<>();
         costs5.add(2);
         costs5.add(1);
-        City2 F11 = new City2("F", destinations5, costs5);
+        CityTask2 F11 = new CityTask2("F", destinations5, costs5);
         System.out.println(a11);
         System.out.println(b11);
         System.out.println(c11);
@@ -265,13 +269,13 @@ public class Main {
         System.out.println(f3);
 
         System.out.println("Сложение дробей:");
-        System.out.println(f1 + " + " + f2 + " = " + f1.sum(f2));
+        System.out.println(f1 + " + " + f2 + " = " + f1.addFraction(f2));
         System.out.println("Вычитание дробей:");
-        System.out.println(f1 + " - " + f2 + " = " + f1.minus(f2));
+        System.out.println(f1 + " - " + f2 + " = " + f1.subtractFraction(f2));
         System.out.println("Умножение дробей:");
-        System.out.println(f1 + " * " + f2 + " = " + f1.multiply(f2));
+        System.out.println(f1 + " * " + f2 + " = " + f1.multiplyFraction(f2));
         System.out.println("Деление дробей:");
-        System.out.println(f1 + " / " + f2 + " = " + f1.div(f2));
+        System.out.println(f1 + " / " + f2 + " = " + f1.divideFraction(f2));
 
         System.out.println("Введите целое число:");
         int num;
@@ -284,17 +288,20 @@ public class Main {
                 in.next();
             }
         }
-        Fraction numf=new Fraction(num, 1);
+        Fraction numf = new Fraction(num, 1);
         System.out.println("Сложение дроби и числа:");
-        System.out.println(f1 + " + " + num + " = " + f1.sum(numf));
+        System.out.println(f1 + " + " + num + " = " + f1.addFraction(numf));
         System.out.println("Вычитание дроби и числа:");
-        System.out.println(f2 + " - " + num + " = " + f1.minus(numf));
+        System.out.println(f2 + " - " + num + " = " + f1.subtractFraction(numf));
         System.out.println("Умножение дроби и числа:");
-        System.out.println(f3 + " * " + num + " = " + f1.multiply(numf));
+        System.out.println(f3 + " * " + num + " = " + f1.multiplyFraction(numf));
         System.out.println("Деление дроби и числа:");
-        System.out.println(f1 + " / " + num + " = " + f1.div(numf));
-
-        System.out.println("Результат f1.sum(f2).div(f3).minus(5) = " + f1.sum(f2).div(f3).minus(5));
+        System.out.println(f1 + " / " + num + " = " + f1.divideFraction(numf));
+        Fraction f5=new Fraction(5);
+        System.out.println(
+                "Результат f1.addFraction(f2).divideFraction(f3).subtractFraction(f5) = " +
+                        f1.addFraction(f2).divideFraction(f3).subtractFraction(f5)
+        );
         in.close();
     }
 }

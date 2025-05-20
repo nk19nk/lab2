@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class City2{
+public class CityTask2 {
     private String name;
-    private List<City2> destinations;
+    private List<CityTask2> destinations;
     private List<Integer> costs;
 
     String setName(){
@@ -14,11 +14,11 @@ public class City2{
         return this.name;
     }
 
-    List<City2> setDestinations(){
+    List<CityTask2> setDestinations(){
         this.destinations=destinations;
         return this.destinations;
     }
-    List<City2> getDestinations(){
+    List<CityTask2> getDestinations(){
         return this.destinations;
     }
 
@@ -30,13 +30,13 @@ public class City2{
         return this.costs;
     }
 
-    City2(String name) {
+    CityTask2(String name) {
         this.name = name;
         this.destinations = new ArrayList<>();
         this.costs = new ArrayList<>();
     }
 
-    City2(String name, List<City2> destinations, List<Integer> costs) {
+    CityTask2(String name, List<CityTask2> destinations, List<Integer> costs) {
         this.name = name;
         this.destinations = new ArrayList<>();
         this.costs = new ArrayList<>();
@@ -48,15 +48,22 @@ public class City2{
         }
     }
 
-    public void addRoute(City2 destination, int cost) {
+    public void addRoute(CityTask2 destination, int cost) {
         destinations.add(destination);
         costs.add(cost);
     }
 
-    public String toString() {
-        StringBuilder rez = new StringBuilder("Из города " + name + " можно попасть в города:" + "\n");
+    public String convertToString() {
+        StringBuilder rez = new StringBuilder(
+                "Из города " + name + " можно попасть в города:\n"
+        );
         for (int i = 0; i < destinations.size(); i++) {
-            rez.append(destinations.get(i).getName()).append(" : ").append(costs.get(i)).append("\n");
+            String destinationName = destinations.get(i).getName();
+            int cost = costs.get(i);
+            rez.append(destinationName)
+                    .append(" : ")
+                    .append(cost)
+                    .append("\n");
         }
         return rez.toString();
     }

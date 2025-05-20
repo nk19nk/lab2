@@ -1,9 +1,8 @@
 public class Names {
-    //поля
     private String surname;
     private String name;
     private String patronymic;
-    //свойства
+
     String setName(String name) {
         this.name=name;
         return this.name;
@@ -25,7 +24,7 @@ public class Names {
     String getPatronymic() {
         return this.patronymic;
     }
-    //конструктор
+
     Names(String surname, String name, String patronymic) {
         this.name=name;
         this.surname=surname;
@@ -37,8 +36,8 @@ public class Names {
     Names(String surname){
         this(surname,null,null);
     }
-    //методы
-    public String toString(){
+
+    public String convertToString(){
         StringBuilder rez=new StringBuilder();
         if (surname!=null && !surname.isEmpty()){
             rez.append(surname);

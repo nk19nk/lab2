@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class City {
+public class CityTask1 {
     private String name;
-    private List<City> destinations;
+    private List<CityTask1> destinations;
     private List<Integer> costs;
 
     String setName(){
@@ -14,11 +14,11 @@ public class City {
         return this.name;
     }
 
-    List<City> setDestinations(){
+    List<CityTask1> setDestinations(){
         this.destinations=destinations;
         return this.destinations;
     }
-    List<City> getDestinations(){
+    List<CityTask1> getDestinations(){
         return this.destinations;
     }
 
@@ -30,23 +30,31 @@ public class City {
         return this.costs;
     }
 
-    City(String name) {
+    CityTask1(String name) {
         this.name = name;
         this.destinations = new ArrayList<>();
         this.costs = new ArrayList<>();
     }
 
-    public void addRoute(City destination, int cost) {
+    public void addRoute(CityTask1 destination, int cost) {
         destinations.add(destination);
         costs.add(cost);
     }
 
-    public String toString() {
-        StringBuilder rez = new StringBuilder("Из города " + name + " можно попасть в города:" + "\n");
+    public String convertToString() {
+        StringBuilder rez = new StringBuilder(
+                "Из города " + name + " можно попасть в города:\n"
+        );
         for (int i = 0; i < destinations.size(); i++) {
-            rez.append(destinations.get(i).getName()).append(" : ").append(costs.get(i)).append("\n");
+            String destinationName = destinations.get(i).getName();
+            int cost = costs.get(i);
+            rez.append(destinationName)
+                    .append(" : ")
+                    .append(cost)
+                    .append("\n");
         }
         return rez.toString();
     }
+
 }
 

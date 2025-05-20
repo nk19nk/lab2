@@ -1,8 +1,7 @@
 public class HumanTask1 {
-    //поля
     private String name;
     private int height;
-    //свойства
+
     String setName(String name) {
         this.name=name;
         return this.name;
@@ -17,13 +16,13 @@ public class HumanTask1 {
     int getHeight() {
         return this.height;
     }
-    //конструктор
+
     HumanTask1(String name, int height) {
         this.name = name;
         this.height = height;
     }
-    //методы
-    public String toString(){
+
+    public String convertToString(){
         return name + ", рост: " + height;
     }
 }
